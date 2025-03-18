@@ -1,0 +1,60 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Blank
+    </ion-title>
+  </ion-toolbar>
+
+</ion-header>
+
+<ion-alert
+trigger="present-alert"
+header="seu valor é:"
+message={{res}}
+[buttons]="alertButton"
+>
+
+</ion-alert>
+
+<ion-content [fullscreen]="true">  <ion-item>
+  <ion-label> Real: </ion-label>
+  <ion-input [(ngModel)]="dis" type="number"></ion-input>
+</ion-item>
+<ion-item>
+
+<ion-label>selecione a moeda</ion-label>
+<ion-radio-group [(ngModel)]="tipo">
+  <ion-item>
+    <ion-label>Dolar </ion-label>
+    <ion-radio value="USA" > </ion-radio>
+  </ion-item>
+
+  <ion-item>
+  <ion-label>Euro </ion-label>
+        <ion-radio value="EUA"></ion-radio>
+      </ion-item>
+
+
+
+</ion-radio-group>
+
+</ion-item>
+
+<ion-button expand="full" (click)="converter()" id="present-alert" > o valor é</ion-button>
+
+<ion-item>
+<ion-alert trigger="present-alert" message={{res}} header="" [buttons]="alertButton"  >
+
+</ion-alert>
+
+
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Blank</ion-title>
+
+    </ion-toolbar>
+  </ion-header>
+
+
+
+
